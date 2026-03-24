@@ -178,7 +178,7 @@ WordPress `Deployment` should use fair, equal CPU/memory across 3 Pods, includin
 
 ---
 
-## Question 6 – cert-manager CRDs & kubectl explain
+## Question 5 – cert-manager CRDs & kubectl explain
 
 **Tasks**
 - List all cert-manager CRDs to `/root/resources.yaml`.
@@ -192,7 +192,7 @@ kubectl explain certificate.spec.subject > /root/subject.yaml
 
 ---
 
-## Question 7 – PriorityClass & Deployment Patch
+## Question 6 – PriorityClass & Deployment Patch
 
 **Goal**
 - Create `PriorityClass` `high-priority` for user workloads with a value one below the *highest* existing user-defined priority.
@@ -227,7 +227,7 @@ kubectl -n priority rollout status deployment busybox-logger
 
 ---
 
-## Question 8 – CNI Choice (Flannel vs Calico)
+## Question 7 – CNI Choice (Flannel vs Calico)
 
 **Requirement**
 - CNI must:
@@ -247,7 +247,7 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/
 
 ---
 
-## Question 9 – cri-dockerd Setup
+## Question 8 – cri-dockerd Setup
 
 **Tasks**
 - Install `cri-dockerd` from `.deb` package.
@@ -282,7 +282,7 @@ sysctl --system
 
 ---
 
-## Question 10 – Taints & Tolerations
+## Question 9 – Taints & Tolerations
 
 **Tasks**
 - Taint `node01` so normal Pods cannot be scheduled:
@@ -326,7 +326,7 @@ kubectl get pods -o wide
 
 ---
 
-## Question 11 – Migrate Ingress to Gateway API
+## Question 10 – Migrate Ingress to Gateway API
 
 **Scenario**
 - Existing `Ingress` named `web` exposes an HTTPS site.
@@ -392,7 +392,7 @@ kubectl get pods -o wide
 
 ---
 
-## Question 12 – Ingress for echo-service
+## Question 11 – Ingress for echo-service
 
 > Note: In the original text there is a small mistake: the Service is on port 80, but the Ingress backend uses port 8080. Both must match. The fixed answer uses port 80 consistently.
 
@@ -445,7 +445,7 @@ Expected output: `200`.
 
 ---
 
-## Question 13 – NetworkPolicy (Least Permissive)
+## Question 12 – NetworkPolicy (Least Permissive)
 
 **Scenario**
 - Deployments:
@@ -480,7 +480,7 @@ kubectl apply -f network-policy-3.yaml
 
 ---
 
-## Question 14 – StorageClass local-storage
+## Question 13 – StorageClass local-storage
 
 **Tasks**
 - Create StorageClass:
@@ -512,7 +512,7 @@ kubectl patch sc local-path \
 
 ---
 
-## Question 16 – NodePort Service
+## Question 14 – NodePort Service
 
 **Scenario**
 - Deployment: `nodeport-deployment`
@@ -554,7 +554,7 @@ kubectl apply -f svc.yaml
 
 ---
 
-## Question 17 – TLS v1.3 Only & Verification
+## Question 15 – TLS v1.3 Only & Verification
 
 **Scenario**
 - Namespace: `nginx-static`
